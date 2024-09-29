@@ -93,6 +93,7 @@ const SUPPORTED_LANGUAGES = [
   "purescript",
   "python",
   "racket",
+  "regex",
   "rst",
   "ruby",
   "rust",

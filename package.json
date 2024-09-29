@@ -21,7 +21,7 @@
     "web-tree-sitter": "^0.23.0",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://htfy96.github.io/ts-visualizer",
+  "homepage": ".",
   "scripts": {
     "start": "craco start",
     "build": "craco build",

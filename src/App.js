@@ -107,6 +107,7 @@ const SUPPORTED_LANGUAGES = [
   "toml",
   "tsx",
   "twig",
+  "typescript",
   "verilog",
   "vhdl",
   "xml",

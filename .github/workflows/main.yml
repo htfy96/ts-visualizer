@@ -1,0 +1,17 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches: [ "master" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Setup Node.js environment
+      uses: actions/setup-node@v4.0.4
+    - uses: actions/checkout@v3
+    - name: Build and Deploy React app to GitHub Pages
+      uses: omkartapale/react-deployment-gh-pages@v1.0.0

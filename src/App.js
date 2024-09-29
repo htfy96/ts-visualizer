@@ -16,6 +16,8 @@ import { useDebounce, useAsync, useEffectOnce } from "react-use";
 import Button from "@mui/material/Button";
 import { Buffer } from "buffer";
 import Snackbar from "@mui/material/Snackbar";
+import IconButton from "@mui/material/IconButton";
+import GithubIcon from "@mui/icons-material/GitHub";
 
 import Parser from "web-tree-sitter";
 
@@ -561,6 +563,17 @@ export default function App() {
           <Typography variant="h6" component="h1">
             TreeSitter Visualizer
           </Typography>
+          <IconButton
+            href="https://github.com/htfy96/ts-visualizer"
+            target="_blank"
+            rel="noreferrer"
+            sx={{
+              ml: "auto",
+              color: "white",
+            }}
+          >
+            <GithubIcon></GithubIcon>
+          </IconButton>
         </Toolbar>
       </AppBar>
       <Box

@@ -412,13 +412,21 @@ export default function App() {
       setTreeViewerWidth(plotDiv.current.clientWidth);
       setTreeViewerHeight(plotDiv.current.clientHeight);
     }
-    return !computedTree.loading
-      ? JSON.stringify(
-          convertTreeNodeToJSON(computedTree.value.rootNode, terse),
-          null,
-          2
-        )
-      : "N/A";
+    if (computedTree.loading) {
+      return "N/A";
+    }
+    if (!computedTree.value) {
+      return JSON.stringify(
+        { error: computedTree.error ? computedTree.error.message : "" },
+        null,
+        2
+      );
+    }
+    return JSON.stringify(
+      convertTreeNodeToJSON(computedTree.value.rootNode, terse),
+      null,
+      2
+    );
   }, [computedTree, terse]);
 
   React.useEffect(() => {
